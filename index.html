@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Image Optimization</title>
+</head>
+
+<body>
+
+  <!-- specifying image formats -->
+
+  <!-- png format -->
+
+  <img src="https://res.cloudinary.com/codehacks/image/upload/f_png/v1580984200/demo.jpg"
+    alt="Room with rays of the sun coming in through the windows">
+
+  <!-- allow cloudinary automatically determine image format -->
+  <img src="https://res.cloudinary.com/codehacks/image/upload/f_auto/v1580984200/demo.jpg"
+    alt="Room with rays of the sun coming in through the windows">
+
+
+  <!-- using srcset and sizes  -->
+
+  <!-- without cloudinary -->
+
+  <img srcset="images/demo-400.jpeg 400w,
+            images/demo.jpeg 750w" sizes="(max-width: 600px) 400px,
+              750px" src="images/demo.jpeg" alt="Room with rays of the sun coming in through the windows">
+
+  <!-- with cloudinary -->
+
+  <img srcset="https://res.cloudinary.com/codehacks/image/upload/w_400/v1580984200/demo.jpg 400w,
+              https://res.cloudinary.com/codehacks/image/upload/w_750/v1580984200/demo.jpg 750w" sizes="(max-width: 600px) 400px,
+                750px" src="https://res.cloudinary.com/codehacks/image/upload/w_750/v1580984200/demo.jpg"
+    alt="Room with rays of the sun coming in through the windows">
+
+
+  <!-- quality transformations -->
+
+  <!-- quality auto -->
+  <img src="https://res.cloudinary.com/codehacks/image/upload/q_auto/v1580984200/demo.jpg"
+    alt="Room with rays of the sun coming in through the windows">
+
+  <!-- quality q_60 -->
+  <img src="https://res.cloudinary.com/codehacks/image/upload/q_auto/v1580984200/demo.jpg"
+    alt="Room with rays of the sun coming in through the windows">
+
+  <!-- quality low -->
+  <img src="https://res.cloudinary.com/codehacks/image/upload/q_auto:eco/v1580984200/demo.jpg"
+    alt="Room with rays of the sun coming in through the windows">
+
+  <!-- without quality transformations -->
+  <img src="https://res.cloudinary.com/codehacks/image/upload/v1580984200/demo.jpg"
+    alt="Room with rays of the sun coming in through the windows">
+
+
+</body>
+
+</html>
